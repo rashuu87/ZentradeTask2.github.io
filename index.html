@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartserve</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <div class="step-row">
+        <div class="step">
+            <div>Step 1: </div>
+            <div>
+                <input type="file" name="" id="filetoupload">
+                <p>Supported File Type(s): .CSV,.JSON</p>
+            </div>
+        </div>
+        <div class="step">
+            <div>Step 2: </div>
+            <div>
+                <p>Specify Format</p>
+                <div>
+                    <label>File Type : </label>
+                    <select class="arrows special">
+                        <option value="json">JSON</option>
+                        <option value="csv">CSV</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Character Encoding : </label>
+                    <select class="arrows special">
+                        <option value="utf8">UTF-8</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Delimeter : </label>
+                    <select class="arrows special">
+                        <option value="comma">Comma</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Has Header : </label>
+                    <input type="checkbox" name="" id="">
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="step-row1">
+
+        <div>
+            <label for="availableFields">Available Fields:</label><br>
+            <select name="availableFields" id="availableFields" multiple>
+                <!-- Options for Available Fields go here -->
+                
+            </select>
+        </div>
+        
+        <div>
+            <button type="button" onclick="addFields()"> >></button>
+            <br><br>
+            <button type="button" onclick="removeFields()"> <<</button>
+        </div>
+        
+        <div>
+            <label for="displayedFields">Fields to be displayed:</label><br>
+            <select name="displayedFields" id="displayedFields" multiple>
+                <!-- Options for Displayed Fields go here -->
+            </select>
+        </div>
+        
+    </div>
+    <div>
+        <input type="button" value="Next" onclick="myRead();">
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
